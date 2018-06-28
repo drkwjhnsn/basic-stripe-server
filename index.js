@@ -1,9 +1,9 @@
-require('envfile').config();
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
-app.use(bodyParser.JSON());
+app.use(bodyParser.json());
 
 app.post('/payment', (req, res) => {
   charge(req)
